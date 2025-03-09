@@ -1,9 +1,8 @@
-# green-recommender-systems
-Code and data used for Green Recsys Thesis
+# Green Recommender Systems
+Code and data used in the paper: _Towards Carbon Footprint-Aware Recommender Systems for Greener
+Item Recommendation_
 
+## Dataset
+The dataset in this repository contains greenness scores of recipes (i.e. scores describing their sustainability), originating from the Food.com dataset. The paper describes in depth how the dataset was constructed.
 
-Initial Rough version of files have been uploaded. In the coming days/time, I will
-add documentation/cleanup the code and data.
-
-The original Food.com files are too large to upload. They can be found here:
-https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions
+This repository does not contain the original Food.com dataset, that we used to build our dataset on. That dataset, which contains the user-item ratings, can be found here: https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions
