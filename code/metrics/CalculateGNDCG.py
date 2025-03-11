@@ -26,9 +26,6 @@ class GNDCGCalculator:
         ranking = self.data.copy()
         ranking = ranking.sort_values('weighted_utility', ascending=False).head(length).reset_index()
 
-        # with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-        #     print(ranking)
-
         GDCG = 0
 
         for index, row in ranking.iterrows():

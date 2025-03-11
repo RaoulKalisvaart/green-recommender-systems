@@ -30,12 +30,4 @@ for index, row in ing.iterrows():
 
 ing.to_csv("ingredients_in_used_recipes.csv")
 
-#rice
-#beans
-
-#op eerste veranderd: chicken, turkey, tuna (even goed naar kijken, bijvoorbeeld seasoning).
-
-
-#######################################################
-
 

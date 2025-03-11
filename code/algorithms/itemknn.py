@@ -1,6 +1,5 @@
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
-from sklearn.model_selection import train_test_split
 import pandas as pd
 
 class ItemKNN:
@@ -24,17 +23,8 @@ class ItemKNN:
 
     def find_neighbours(self, id):
         query_index = self.movie_user_mat.index.tolist().index(id)
-        # print(query_index)
         original_id = self.movie_user_mat.iloc[query_index, :].values.reshape(1, -1)
-        # print(original_id)
         distances, indices = self.model_knn.kneighbors(original_id, n_neighbors=self.K+1)
-
-        # for i in range(0, len(distances.flatten())):
-        #     if i == 0:
-        #         print('Recommendations for {0}:\n'.format(self.movie_user_mat.index[query_index]))
-        #     else:
-        #         print('{0}: {1}, with distance of {2}:'.format(i, self.movie_user_mat.index[indices.flatten()[i]],
-        #                                                        distances.flatten()[i]))
 
         return distances, indices
 
@@ -62,11 +52,7 @@ class ItemKNN:
 
 
 
-# dl = GeneralDataLoader("../data/input/food_dataset/just_interactions.csv")
 rs = ItemKNN(200)
-
-# train, test = train_test_split(dl.interactions_df, test_size=0.05)
-#
 
 train = pd.read_csv('old_results/train_80.csv')
 test = pd.read_csv('old_results/test_20.csv')

@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 from requests import get
 import re
 import pandas as pd
-import time
 
 def scraper(ingredient):
     length =  len(ingredient.split())

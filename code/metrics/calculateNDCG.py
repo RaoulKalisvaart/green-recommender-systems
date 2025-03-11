@@ -27,8 +27,6 @@ class NDCGCalculator:
         ranking = self.data.copy()
         ranking = ranking.sort_values('weighted_utility', ascending=False).head(length).reset_index()
 
-        # with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
-        #     print(ranking)
 
         DCG = 0
 
@@ -57,10 +55,6 @@ class NDCGCalculator:
 splits = pd.read_csv("../separating_data/splits2.csv", index_col=0).transpose()
 
 ALPHAS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-# ALPHAS = [1]
-
-# techniques = ["GlobalAverage", "SVD", "SVDpp", "CoClustering"]
-# NUMBERS = ["1", "2"]
 
 techniques = ["userKNN", "itemKNN"]
 NUMBERS = ["", "1", "2"]

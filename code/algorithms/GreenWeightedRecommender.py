@@ -1,17 +1,6 @@
 import pandas as pd
 
-'''
-Pseudocode:
-
-for every interaction:
-    utility = alpha*rating + (1-alpha)*greenness
-
-'''
-
 ALPHAS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-# ALPHAS = [1, 0.8, 0.6]
-# techniques = ["GlobalAverage", "SVD", "SVDpp", "CoClustering"]
-# NUMBERS = ["1", "2"]
 
 techniques = ["userKNN", "itemKNN"]
 NUMBERS = ["", "1", "2"]
